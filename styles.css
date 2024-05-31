@@ -1,0 +1,47 @@
+:root {
+    --primary : #FFE5A1;
+}
+
+@font-face {
+    font-family: 'Matrix Sans Raster';
+    src: url('fonts/matrix_sans/MatrixSans-fonts/fonts/webfonts/MatrixSansRaster-Regular.woff2');
+}
+
+body {
+    background-image: url('assets/anime-style-cozy-home-interior-with-furnishings\ \(3\).webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.timebx {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 196px;
+    height: 91px;
+    background-color: var(--primary);
+    border-radius: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-left: 35px;
+}
+
+.time {
+    font-family: 'Matrix Sans Raster';
+    font-size: 2.5rem;
+}
+
+.ampmtext {
+    font-family: 'Matrix Sans Raster';
+    font-size: 1.13rem;
+}
+
+.ampm {
+    display: flex;
+    flex-direction: column;
+}
