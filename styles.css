@@ -66,9 +66,9 @@ body {
     transition: all cubic-bezier(.33,.14,.35,1) 200ms;
 }
 
-.button-tool:hover {
+/* .button-tool:hover {
     scale: 1.1;
-}
+} */
 
 .button-tool:nth-child(1) {
     border-radius:800px 350px 350px 800px ;
@@ -132,4 +132,5 @@ body {
     opacity: 100%;
     translate: 0, 0;
     align-items: center;
+    margin-left: 5;
 }
