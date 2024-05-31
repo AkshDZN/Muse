@@ -1,5 +1,6 @@
 :root {
     --primary : #FFE5A1;
+    --secondary : #CBA951;
 }
 
 @font-face {
@@ -17,23 +18,19 @@ body {
 }
 
 .timebx {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 196px;
+    width: 212px;
     height: 91px;
     background-color: var(--primary);
     border-radius: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 35px;
-    margin-left: 35px;
+    gap: 6px;
 }
 
 .time {
     font-family: 'Matrix Sans Raster';
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .ampmtext {
@@ -44,4 +41,78 @@ body {
 .ampm {
     display: flex;
     flex-direction: column;
+}
+
+.toolbar {
+    width: 212px;
+    height: 91px;
+    background-color: var(--primary);
+    border-radius: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    translate: -20px;
+}
+
+.button-tool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--secondary);
+    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
+}
+
+.button-tool:hover {
+    scale: 1.1;
+}
+
+.button-tool:nth-child(1) {
+    border-radius:800px 350px 350px 800px ;
+    margin-left: 5px;
+    margin-right: 2.5px;
+}
+
+.button-tool:nth-child(2) {
+    border-radius: 350px 800px 800px 350px;
+    margin-right: 5px;
+    margin-left: 2.5px;
+}
+
+.bottom-left {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 35px;
+    margin-bottom: 35px;
+}
+
+.tool-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    opacity: 50%;
+}
+
+.icon:hover {
+    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
+    opacity: 100%;
+}
+
+.bottom-right {
+    display: flex;
+    gap: 6px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 35px;
+    margin-bottom: 35px;
 }
