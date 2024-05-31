@@ -100,10 +100,10 @@ body {
     width: 24px;
     height: 24px;
     opacity: 50%;
+    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
 }
 
 .icon:hover {
-    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
     opacity: 100%;
 }
 
@@ -115,4 +115,21 @@ body {
     right: 0;
     margin-right: 35px;
     margin-bottom: 35px;
+}
+
+.beta-warning {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary);
+    z-index: 800;
+    font-family: 'Matrix Sans Raster';
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: all cubic-bezier(.33,.14,.35,1) 2000ms;
+    opacity: 100%;
+    translate: 0, 0;
+    align-items: center;
 }
