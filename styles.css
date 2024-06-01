@@ -198,6 +198,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    opacity: 0%;
 }
 
 .move {
@@ -220,6 +222,8 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
+    scale: 0;
+    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
 }
 
 .pomoplacer {
