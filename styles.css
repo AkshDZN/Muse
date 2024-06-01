@@ -180,6 +180,15 @@ body {
     height: 40px;
 }
 
+#ppause {
+    /* opacity: 0%; */
+    display: none;
+}
+
+#pplay {
+    display: flex;
+}
+
 .pomo-close {
     width: 56px;
     height: 56px;

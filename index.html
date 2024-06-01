@@ -19,8 +19,12 @@
         
             <div class="pomodoro-timer">25:00</div>
             <div class="pomo-controls">
-                <div class="pomo-button" id="playpause"><img src="assets/icons/play.svg" alt="play" class="pomo-icon"></div>
-                <div class="pomo-button" id="edit"><img src="assets/icons/edit.svg" alt="edit" class="pomo-icon"></div>
+                <div class="pomo-button" id="playpause">
+                    <img src="assets/icons/play.svg" alt="play" id="pplay" onclick="timerCheck()" class="pomo-icon">
+                    <img src="assets/icons/pause.svg" alt="pause" id="ppause" onclick="pauseTimer()" class="pomo-icon">
+                </div>
+
+                <div class="pomo-button" id="edit"><img src="assets/icons/edit.svg" alt="edit" onclick="askTime()" class="pomo-icon"></div>
             </div>
         </div>
 
