@@ -26,9 +26,7 @@ body {
 .time {
     font-family: 'Outward';
     font-size: 8rem;
-    background: linear-gradient(180deg, rgba(253,218,212,1) 0%, rgba(255,255,255,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgb(253, 219, 217);
     /* border: solid red; */
     margin-top: 40px;
     text-align: center;
@@ -94,4 +92,6 @@ body {
     justify-content: space-between;
     margin-bottom: 30px;
     gap: 10px;
+
+    transition: all cubic-bezier(.25,.11,.2,.99) 1000ms;
 }
