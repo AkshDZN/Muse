@@ -1,244 +1,87 @@
-:root {
-    --primary : #FFE5A1;
-    --secondary : #CBA951;
+@font-face {
+    font-family: 'Geist';
+    src: url('fonts/Geist-1.3.0/variable-woff/GeistVF.woff2');
 }
 
 @font-face {
-    font-family: 'Matrix Sans Raster';
-    src: url('fonts/matrix_sans/MatrixSans-fonts/fonts/webfonts/MatrixSansRaster-Regular.woff2');
+    font-family: 'Outward';
+    src: url('fonts/outward-master/fonts/webfonts/outward-block-webfont.woff2');
 }
 
 body {
-    background-image: url('assets/anime-style-cozy-home-interior-with-furnishings\ \(3\).webp');
+    background-image: url('assets/bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
     margin: 0;
 }
 
-.timebx {
-    width: 212px;
-    height: 91px;
-    background-color: var(--primary);
-    border-radius: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-}
-
 .time {
-    font-family: 'Matrix Sans Raster';
-    font-size: 3rem;
+    font-family: 'Outward';
+    font-size: 8rem;
+    background: linear-gradient(180deg, rgba(253,218,212,1) 0%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* border: solid red; */
+    margin-top: 40px;
+    text-align: center;
 }
 
-.ampmtext {
-    font-family: 'Matrix Sans Raster';
-    font-size: 1.13rem;
-}
-
-.ampm {
-    display: flex;
-    flex-direction: column;
-}
-
-.toolbar {
-    width: 212px;
-    height: 91px;
-    background-color: var(--primary);
+.tool-icon-bx {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.01);
     border-radius: 800px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    translate: -20px;
-}
-
-.button-tool {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 80px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: var(--secondary);
-    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
+
+    transition: all cubic-bezier(.25,.11,.2,.99) 200ms;
 }
 
-/* .button-tool:hover {
-    scale: 1.1;
-} */
-
-.button-tool:nth-child(1) {
-    border-radius:800px 350px 350px 800px ;
-    margin-left: 5px;
-    margin-right: 2.5px;
-}
-
-.button-tool:nth-child(2) {
-    border-radius: 350px 800px 800px 350px;
-    margin-right: 5px;
-    margin-left: 2.5px;
-}
-
-.bottom-left {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin-left: 35px;
-    margin-bottom: 35px;
+.tool-icon-bx:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .tool-icon {
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
 }
 
-.icon {
-    width: 24px;
-    height: 24px;
-    opacity: 50%;
-    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
-}
+.dock-center {
+    height: 60px;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 800px;
+    backdrop-filter: blur(50px);
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
 
-.icon:hover {
-    opacity: 100%;
-}
-
-.bottom-right {
     display: flex;
-    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.dock-center:nth-child(1) {
+    margin-left: 30px;
+}
+
+.dock-center:nth-child(3) {
+    margin-right: 30px;
+}
+
+.dock {
     position: fixed;
     bottom: 0;
-    right: 0;
-    margin-right: 35px;
-    margin-bottom: 35px;
-}
-
-.beta-warning {
-    position: absolute;
+    display: flex;
+    height: 60px;
     width: 100vw;
-    height: 100vh;
-    background-color: var(--primary);
-    z-index: 800;
-    font-family: 'Matrix Sans Raster';
-    font-size: 3rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    transition: all cubic-bezier(.33,.14,.35,1) 2000ms;
-    opacity: 100%;
-    translate: 0, 0;
-    align-items: center;
-    margin-left: 5;
-}
-
-.pomodoro-timer {
-    font-family: 'Matrix Sans Raster';
-    font-size: 3rem;
-    width: 225px;
-    height: 103px;
-    background-color: var(--primary);
-    border-radius: 800px;
-    text-align: center;
-    line-height: 103px;
-}
-
-.pomo-controls {
-    width: 152px;
-    height: 64px;
-    background-color: var(--primary);
-    border-radius: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    transform: translate(0%, -30%);
-}
-
-.pomo-button {
-    width: 71px;
-    height: 58px;
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pomo-button:nth-child(1) {
-    border-radius: 800px 350px 350px 800px;
-}
-
-.pomo-button:nth-child(2) {
-    border-radius: 350px 800px 800px 350px;
-}
-
-.pomo-icon {
-    width: 40px;
-    height: 40px;
-}
-
-#ppause {
-    /* opacity: 0%; */
-    display: none;
-}
-
-#pplay {
-    display: flex;
-}
-
-.pomo-close {
-    width: 56px;
-    height: 56px;
-    background-color: var(--primary);
-    border-radius: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pomo-move {
-    width: 39px;
-    height: 39px;
-    background-color: var(--primary);
-    border-radius: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    opacity: 0%;
-}
-
-.move {
-    width: 24px;
-    height: 24px;
-}
-
-.pomo-top {
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    transform: translate(90%, 60%);
-}
-
-.fullpomo {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    scale: 0;
-    transition: all cubic-bezier(.33,.14,.35,1) 200ms;
-}
-
-.pomoplacer {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 10px;
 }
