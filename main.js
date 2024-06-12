@@ -34,3 +34,16 @@ function explode() {
 		isExplode = false;
 	}
 }
+
+const pomodoroWindow = document.querySelector('.pomodoro');
+let isPomoOpen = false;
+
+function pomodoro() {
+	if (isPomoOpen === false) {
+		pomodoroWindow.style.scale = "1";
+		isPomoOpen = true;
+	} else if (isPomoOpen === true) {
+		pomodoroWindow.style.scale = "0";
+		isPomoOpen = false;
+	}
+}

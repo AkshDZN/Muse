@@ -9,9 +9,33 @@
 <body>
     <div class="text-3d">
         <div class="time" onclick="explode()">12:29</div>
-        
     </div>
 
+    <div class="pomodoro">
+        <div class="pomodoro-base">
+            <div class="window-title">Pomodoro</div>
+
+            <div class="window-controls">
+                <div class="top-icon-base" id="top-icon-pomo"><img src="assets/pomo-icon.svg" alt="pomo-icon" class="top-icon"></div>
+
+                <div class="window-controls-sub">
+                    <div class="top-icon-base" id="top-icon-minimize"><img src="assets/minimize.svg" alt="minimize-icon" class="top-icon"></div>
+                    <div class="top-icon-base" id="top-icon-close"><img src="assets/close.svg" alt="close-icon" class="top-icon"></div>
+                </div>
+            </div>
+
+            <div class="pomo-mode-wrapper">
+                <div class="pomo-mode">
+                    <div class="pomo-mode-item">Pomodoro</div>
+                    <div class="pomo-mode-item">Break</div>
+                    <div class="pomo-mode-item">Break +</div>
+                </div>
+            </div>
+
+            <div class="pomo-timer">25:00</div>
+            <div class="pomo-play-wrapper"><img src="assets/play.svg" alt="pomo-play" class="pomo-play"></div>
+        </div>
+    </div>
 
     <div class="dock">
         <div class="dock-center">
@@ -19,7 +43,7 @@
         </div>
     
         <div class="dock-center">
-            <div class="tool-icon-bx" id="pomodoro"><img src="assets/pomo-icon.svg" alt="pomo-icon" class="tool-icon"></div>
+            <div class="tool-icon-bx" id="pomodoro" onclick="pomodoro()"><img src="assets/pomo-icon.svg" alt="pomo-icon" class="tool-icon"></div>
             <div class="tool-icon-bx" id="music"><img src="assets/music-icon.svg" alt="music-icon" class="tool-icon"></div>
         </div>
     
