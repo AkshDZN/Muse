@@ -114,6 +114,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all cubic-bezier(.25,.11,.2,.99) 200ms;
+}
+
+.top-icon-base:hover {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .top-icon {
@@ -157,68 +163,71 @@ body {
     font-weight: 600;
     color: rgba(255, 255, 255, 1);
     font-size: 3rem;
-    position: absolute;
     /* border: solid red; */
-    text-align: center;
-    line-height: 222px;
-    width: 273px;
-    height: 222px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 65px;
+    margin-top: 11px;
+    
 }
 
-.pomo-play-wrapper {
-    position: absolute;
-    width: 273px;
-    height: 222px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .pomo-play {
     width: 40px;
     height: 40px;
-    translate: 0px 61px;
+    margin-left: 117px;
+    margin-top: 11px;
+
+    transition: all cubic-bezier(.25,.11,.2,.99) 200ms;
+}
+
+.pomo-play:hover {
+    scale: 1.1;
+}
+
+
+.pomo-mode-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 800px;
+
+    transition: all cubic-bezier(.25,.11,.2,.99) 200ms;
+}
+
+.pomo-mode-item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.pomo-mode-item-text {
+    font-size: 0.63rem;
+    font-family: 'Geist';
+    font-weight: 600;
+    color: white;
 }
 
 .pomo-mode {
+    background-color: rgba(255, 255, 255, 0.05);
+    height: 24px;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 800px;
+    justify-content: center;
+    align-items: center;
     width: fit-content;
     gap: 2px;
-    padding: 2px;
-    justify-content: center;
-    align-items: center;
-    translate: 0px -55px;
-}
-
-.pomo-mode-item {
-    font-family: 'Geist';
-    font-weight: 600;
-    font-size: 0.63rem;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.1);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 9px;
-    padding-right: 9px;
-    width: fit-content;
+    padding-left: 2px;
+    padding-right: 2px;
     border-radius: 800px;
+    margin-left: 48px;
+    margin-top: 46px;
+    z-index: 50009090;
 }
 
-.pomo-mode-item:nth-child(1) {
-    color: black;
-    background-color: white;
-}
 
-.pomo-mode-wrapper {
-    position: absolute;
-    width: 273px;
-    height: 222px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .pomodoro {
     position: absolute;
