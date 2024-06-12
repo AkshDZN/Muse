@@ -48,3 +48,55 @@ function pomodoro() {
 	}
 }
 
+const pomoMode1 = document.getElementById('pomoMode1');
+const pomoModeText1 = document.getElementById('pomoModeText1');
+const pomoMode2 = document.getElementById('pomoMode2');
+const pomoModeText2 = document.getElementById('pomoModeText2');
+const pomoMode3 = document.getElementById('pomoMode3');
+const pomoModeText3 = document.getElementById('pomoModeText3');
+
+pomoMode1.style.backgroundColor = "white";
+pomoModeText1.style.color = "black";
+
+function switchPomoMode(mode) {
+	if (mode === 1) {
+		pomoMode1.style.backgroundColor = "white";
+		pomoModeText1.style.color = "black";
+
+		pomoMode2.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+		pomoModeText2.style.color = "white";
+
+		pomoMode3.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+		pomoModeText3.style.color = "white";
+	} else if (mode === 2) {
+		pomoMode2.style.backgroundColor = "white";
+		pomoModeText2.style.color = "black";
+
+		pomoMode1.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+		pomoModeText1.style.color = "white";
+
+		pomoMode3.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+		pomoModeText3.style.color = "white";
+	} else if (mode === 3) {
+		pomoMode3.style.backgroundColor = "white";
+		pomoModeText3.style.color = "black";
+
+		pomoMode1.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+		pomoModeText1.style.color = "white";
+
+		pomoMode2.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+		pomoModeText2.style.color = "white";
+	}
+}
+
+// time display
+
+setInterval(() => {
+    let currentTime = new Date();
+    let options = { timeStyle: 'short', hour12: true };
+    let timeString = currentTime.toLocaleTimeString('en-US', options);
+
+    timeString = timeString.replace(/ (AM|PM)$/, '');
+
+    timedisplay.innerHTML = timeString;
+}, 1000);
