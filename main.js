@@ -48,6 +48,22 @@ function pomodoro() {
 	}
 }
 
+// music player trigger
+
+const musicPlayer = document.querySelector('.music');
+
+let isMusicOpen = false;
+
+function music() {
+	if (isMusicOpen === false) {
+		musicPlayer.style.scale = 1;
+		isMusicOpen = true;
+	} else if (isMusicOpen === true) {
+		musicPlayer.style.scale = 0;
+		isMusicOpen = false;
+	}
+}
+
 // time display
 
 setInterval(() => {
