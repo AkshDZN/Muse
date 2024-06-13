@@ -164,10 +164,10 @@ body {
     color: rgba(255, 255, 255, 1);
     font-size: 3rem;
     /* border: solid red; */
-    width: fit-content;
+    width: 273px;
     height: fit-content;
-    margin-left: 65px;
     margin-top: 11px;
+    text-align: center;
     
 }
 

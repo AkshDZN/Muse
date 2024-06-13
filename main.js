@@ -48,6 +48,67 @@ function pomodoro() {
 	}
 }
 
+// time display
+
+setInterval(() => {
+    let currentTime = new Date();
+    let options = { timeStyle: 'short', hour12: true };
+    let timeString = currentTime.toLocaleTimeString('en-US', options);
+
+    timeString = timeString.replace(/ (AM|PM)$/, '');
+
+    timedisplay.innerHTML = timeString;
+}, 1000);
+
+
+// pomodoro code 
+let isTimerRunning = false;
+let timer;
+const pomoButton = document.querySelector('.pomo-play');
+
+let pminutes = 24;
+let pseconds = 60;
+
+const alarmSound = new Audio('sounds/alarm.mp3');
+
+function stopTimer() {
+	clearInterval(timer);
+	pminutes = 24;
+	pseconds = 60;
+	pomoButton.src = "assets/play.svg";
+	document.querySelector('.pomo-timer').innerHTML = "25:00";
+	isTimerRunning = false;
+	alarmSound.play();
+}
+
+function startTimer() {
+	if (isTimerRunning === false) {
+		isTimerRunning = true;
+		pomoButton.src = "assets/pause.svg";
+
+		timer = setInterval(() => {
+			pseconds--;
+
+			if (pseconds < 1) {
+				pseconds = 59;
+				pminutes--;
+			}
+
+			document.querySelector('.pomo-timer').innerHTML = pminutes + ":" + pseconds;
+			
+
+			if (pminutes < 0) {
+				stopTimer();
+			}
+
+		}, 1000);
+	} else if (isTimerRunning === true) {
+		clearInterval(timer);
+		isTimerRunning = false;
+		pomoButton.src = "assets/play.svg";
+	}
+}
+
 const pomoMode1 = document.getElementById('pomoMode1');
 const pomoModeText1 = document.getElementById('pomoModeText1');
 const pomoMode2 = document.getElementById('pomoMode2');
@@ -68,6 +129,14 @@ function switchPomoMode(mode) {
 
 		pomoMode3.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
 		pomoModeText3.style.color = "white";
+
+		clearInterval(timer);
+		pminutes = 24;
+		pseconds = 60;
+		document.querySelector('.pomo-timer').innerHTML = "25:00";
+		isTimerRunning = false;
+		pomoButton.src = "assets/play.svg";
+
 	} else if (mode === 2) {
 		pomoMode2.style.backgroundColor = "white";
 		pomoModeText2.style.color = "black";
@@ -77,6 +146,14 @@ function switchPomoMode(mode) {
 
 		pomoMode3.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
 		pomoModeText3.style.color = "white";
+
+		clearInterval(timer);
+		pminutes = 4;
+		pseconds = 60;
+		document.querySelector('.pomo-timer').innerHTML = "5:00";
+		isTimerRunning = false;
+		pomoButton.src = "assets/play.svg";
+
 	} else if (mode === 3) {
 		pomoMode3.style.backgroundColor = "white";
 		pomoModeText3.style.color = "black";
@@ -86,17 +163,13 @@ function switchPomoMode(mode) {
 
 		pomoMode2.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
 		pomoModeText2.style.color = "white";
+
+		clearInterval(timer);
+		pminutes = 9;
+		pseconds = 60;
+		document.querySelector('.pomo-timer').innerHTML = "10:00";
+		isTimerRunning = false;
+		pomoButton.src = "assets/play.svg";
+
 	}
 }
-
-// time display
-
-setInterval(() => {
-    let currentTime = new Date();
-    let options = { timeStyle: 'short', hour12: true };
-    let timeString = currentTime.toLocaleTimeString('en-US', options);
-
-    timeString = timeString.replace(/ (AM|PM)$/, '');
-
-    timedisplay.innerHTML = timeString;
-}, 1000);
