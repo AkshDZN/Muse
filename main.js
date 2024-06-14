@@ -189,3 +189,30 @@ function switchPomoMode(mode) {
 
 	}
 }
+
+// Music Link
+
+const LinkField = document.querySelector(".linkbar-text");
+const videoPlayer = document.querySelector('.vid-frame');
+
+function minifyLink(ytlink) {
+	let link = ytlink;
+	const removeWordsBefore = '<iframe width="560" height="315" src="';
+	const removeWordsAfter = '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+	let phase1 = link.replace(removeWordsBefore, "");
+	let phase2 = phase1.replace(removeWordsAfter, "");
+	videoPlayer.src = phase2;
+}
+
+LinkField.addEventListener("keyup", ({key}) => {
+	if (key === "Enter") {
+		const inputValue = LinkField.value.trim();
+
+		if (inputValue === "") {
+			alert("Please give a valid YouTube Link");
+		} else {
+			minifyLink(LinkField.value);
+		}
+
+	}
+})

@@ -275,11 +275,18 @@ body {
     width: 442px;
     height: 268px;
     border-radius: 11px;
-    background-color: white;
+    background-color: transparent;
     border: solid 1px rgba(255, 255, 255, 0.25);
     margin-left: 9px;
     margin-right: 9px;
     margin-top: 33px;
+    overflow: hidden;
+}
+
+.vid-frame {
+    width: 442px;
+    height: 268px;
+    border-radius: 11px;
 }
 
 .linkbar {
