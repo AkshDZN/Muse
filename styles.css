@@ -367,6 +367,44 @@ body {
     border-radius: 0px 20px 20px 0px;
 }
 
+.settings-page-title {
+    font-family: 'Geist';
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 23px;
+    margin-left: 19px;
+}
+
+.settings-page-subtitle {
+    font-family: 'Geist';
+    font-weight: 600;
+    font-size: 0.68rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 19px;
+}
+
+.settings-page-feature {
+    font-family: 'Geist';
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-top: 16px;
+    margin-left: 19px;
+}
+
+.dock-layout-mode {
+    width: 147px;
+    height: 94px;
+}
+
+.dock-layout-selection {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid red; */
+    gap: 12px;
+    margin-top: 8px;
+    margin-left: 19px;
+}
+
 .settings-menus {
     width: 153px;
     height: fit-content;
