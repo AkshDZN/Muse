@@ -88,10 +88,10 @@
                 <div class="settings-page-feature" id="dock-layout">01 Dock</div>
 
                 <div class="dock-layout-selection">
-                    <img src="assets/dock-layout-mode-split.svg" alt="dock-layout-mode-split" class="dock-layout-mode">
-                    <img src="assets/dock-layout-mode-union.svg" alt="dock-layout-mode-split" class="dock-layout-mode">
-                    <img src="assets/dock-layout-mode-left.svg" alt="dock-layout-mode-split" class="dock-layout-mode">
-                    <img src="assets/dock-layout-mode-right.svg" alt="dock-layout-mode-split" class="dock-layout-mode">
+                    <img src="assets/dock-layout-mode-split.svg" alt="dock-layout-mode-split" class="dock-layout-mode" onclick="docklayout(1)">
+                    <img src="assets/dock-layout-mode-union.svg" alt="dock-layout-mode-split" class="dock-layout-mode" onclick="docklayout(2)">
+                    <img src="assets/dock-layout-mode-left.svg" alt="dock-layout-mode-split" class="dock-layout-mode" onclick="docklayout(3)">
+                    <img src="assets/dock-layout-mode-right.svg" alt="dock-layout-mode-split" class="dock-layout-mode" onclick="docklayout(4)">
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
         </div>
     
         <div class="dock-center">
-            <div class="tool-icon-bx" id="settings"><img src="assets/settings-icon.svg" alt="settings-icon" class="tool-icon"></div>
+            <div class="tool-icon-bx" id="settings" onclick="settings()"><img src="assets/settings-icon.svg" alt="settings-icon" class="tool-icon"></div>
         </div>
     </div>
 

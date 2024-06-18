@@ -73,6 +73,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2px;
+
+    transition: all cubic-bezier(.25,.11,.2,.99) 1000ms;
 }
 
 .dock-center:nth-child(1) {
@@ -442,7 +444,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    scale: 1;
+    scale: 0;
 
     transition: all cubic-bezier(.25,.11,.2,.99) 200ms;
 }

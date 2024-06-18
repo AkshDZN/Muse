@@ -216,3 +216,33 @@ LinkField.addEventListener("keyup", ({key}) => {
 
 	}
 })
+
+
+// settings => layouts => dock
+
+function docklayout(mode) {
+	if (mode === 1) {
+		dock.style.justifyContent = "space-between";
+	} else if (mode === 2) {
+		dock.style.justifyContent = "center";
+	} else if (mode === 3) {
+		dock.style.justifyContent = "flex-start";
+	} else if (mode === 4) {
+		dock.style.justifyContent = "flex-end";
+	}
+}
+
+// open and close settings 
+
+let isSettingsOpen = false;
+const settingsMenu = document.querySelector('.settings');
+
+function settings() {
+	if (isSettingsOpen === false) {
+		settingsMenu.style.scale = 1;
+		isSettingsOpen = true;
+	} else if (isSettingsOpen === true) {
+		settingsMenu.style.scale = 0;
+		isSettingsOpen = false;
+	}
+}
