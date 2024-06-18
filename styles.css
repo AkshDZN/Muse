@@ -360,6 +360,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
 }
 
 .settings-page-base {
@@ -367,6 +368,8 @@ body {
     width: 344px;
     height: 381px;
     border-radius: 0px 20px 20px 0px;
+
+    overflow-y: scroll;
 }
 
 .settings-page-title {

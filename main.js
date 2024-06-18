@@ -246,3 +246,17 @@ function settings() {
 		isSettingsOpen = false;
 	}
 }
+
+//  settings => layouts => time 
+
+function timelayout(mode) {
+		if (mode === 1) {
+		timedisplay.style.textAlign = "center";
+	} else if (mode === 2) {
+		timedisplay.style.textAlign = "left";
+	} else if (mode === 3) {
+		timedisplay.style.textAlign = "right";
+	} else if (mode === 4) {
+		timedisplay.style.justifyContent = "flex-end";
+	} 
+}
