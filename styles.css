@@ -34,6 +34,9 @@ body {
     line-height: 111px;
     transform-style: preserve-3d;
     transform: rotateX(0deg);
+    margin-left: 30px;
+    margin-right: 30px;
+    letter-spacing: 0px;
 
     transition: all cubic-bezier(.25,.11,.2,.99) 1000ms;
 }
@@ -411,6 +414,7 @@ body {
 }
 
 .settings-menus {
+    /* position: absolute; */
     width: 153px;
     height: fit-content;
     /* border: solid red; */
@@ -425,10 +429,6 @@ body {
     align-items: center;
     justify-content: flex-start;
     transition: all cubic-bezier(.25,.11,.2,.99) 200ms;
-}
-
-.settings-menu-item-base:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 .settings-menu-item-text {

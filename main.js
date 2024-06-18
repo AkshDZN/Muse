@@ -252,11 +252,61 @@ function settings() {
 function timelayout(mode) {
 		if (mode === 1) {
 		timedisplay.style.textAlign = "center";
+		timedisplay.style.letterSpacing = "0px";
 	} else if (mode === 2) {
 		timedisplay.style.textAlign = "left";
+		timedisplay.style.letterSpacing = "0px";
 	} else if (mode === 3) {
 		timedisplay.style.textAlign = "right";
+		timedisplay.style.letterSpacing = "0px";
 	} else if (mode === 4) {
-		timedisplay.style.justifyContent = "flex-end";
+		timedisplay.style.letterSpacing = "50px";
+		timedisplay.style.textAlign = "center";
 	} 
+}
+
+// settings menu switcher 
+
+let settingsIndex = 1;
+
+const smit1 = document.getElementById('smit1');
+const smit2 = document.getElementById('smit2');
+const smit3 = document.getElementById('smit3');
+const smit4 = document.getElementById('smit4');
+const smit5 = document.getElementById('smit5');
+
+smit1.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+
+function smitIndex(itemIndex) {
+	if (itemIndex === 1) {
+		smit1.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+		smit2.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit3.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit4.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit5.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+	} else if (itemIndex === 2) {
+		smit1.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit2.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+		smit3.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit4.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit5.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+	} else if (itemIndex === 3) {
+		smit1.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit2.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit3.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+		smit4.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit5.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+	} else if (itemIndex === 4) {
+		smit1.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit2.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit3.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit4.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+		smit5.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+	} else if (itemIndex === 5) {
+		smit1.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit2.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit3.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit4.style.backgroundColor = "rgba(255, 255, 255, 0.0)"
+		smit5.style.backgroundColor = "rgba(255, 255, 255, 0.2)"
+	}
 }
